@@ -16,7 +16,7 @@ let page = document.querySelector(".page");
 let imgs = ["01", "02", "03", "04", "05", "06", "07", "08"];
 let backgroundInterval;
 let switchBackground = true;
-page.style.backgroundImage = `url("/imgs/01.jpg")`;
+page.style.backgroundImage = `url("imgs/01.jpg")`;
 
 let randomBackgroundSwitch = localStorage.getItem("bgk-switch");
 if (
@@ -78,7 +78,7 @@ function randomizeBackground() {
   if (switchBackground === true) {
     backgroundInterval = setInterval(() => {
       let random = Math.floor(Math.random() * imgs.length);
-      page.style.backgroundImage = `url("/imgs/${imgs[random]}.jpg")`;
+      page.style.backgroundImage = `url("imgs/${imgs[random]}.jpg")`;
     }, 3000);
   }
 }
